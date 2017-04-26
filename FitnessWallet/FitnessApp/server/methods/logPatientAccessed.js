@@ -1,0 +1,31 @@
+
+import patient from '../patient';
+import web3 from '../web3.js';
+
+//var Patient = web3.eth.contract(patient.abi);
+
+Meteor.methods({
+  'logPatientAccessed' : function(id)  {
+    console.log(this.userId);
+    console.log(id);
+    if(this.userId === null) {
+      throw new Meteor.Error("logged-out", "The user must be logged in.");
+    }
+    // look up this patient
+    var patientRecord = PatientReports.findOne({_id : id});
+    if(patientRecord) {
+      console.log(patientRecord);
+      //var patient = Patient.at(patientRecord.contractAddress);
+      var user = Meteor.users.findOne({_id: this.userId});
+      var addr = user.services.ethereum.address;
+      console.log(addr);
+      var tx = patient.logAccess(patientRecord.contractAddress, addr);
+      tx.then(function(txHash) {
+        console.log('txHash', txHash);
+      });
+      return "success";
+    } else {
+      throw new Meteor.Error("invalidPatient", "Invalid patient id.");
+    }
+  }
+});
