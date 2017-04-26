@@ -1,0 +1,34 @@
+<template name="addPrescription">
+	{{#ensureLoggedInAndRegistered}}
+	  <div class="jumbotron">
+	    <h1>Add Patient Prescription</h1>
+	    <form>
+	      <div class="form-group">
+	        <label for="name">Name</label>
+	        <input type="text" value="James Howlett" name="name" class="form-control" id="name" >
+	      </div>
+	      <div class="form-group">
+	        <label for="mrn">MRN</label>
+	        <input type="text" value="0001" name="mrn" class="form-control" id="mrn" >
+	      </div>
+
+	      <div class="form-group">
+	        <label for="prescription">Prescription</label>
+	        <textarea type="text" rows='10' name="prescription" class="form-control" id="prescription">
+	Rx tab. Paracetamol 500mg
+	Mitte 30
+	Sig 1 tab oral 3x day
+
+	Rx tab. Morphine 2.5mg
+	Mitte 10
+	Sig 1 tab 1x day
+	        </textarea>
+	      </div>
+
+	      <button type="submit" id='save' class="btn btn-default btn btn-primary btn-lg">Save</button>
+	      <button type="button" id='cancel' class="btn btn btn-lg">Cancel</button>
+	  </form>
+</div> 
+
+	{{/ensureLoggedInAndRegistered}}
+</template>

@@ -1,0 +1,61 @@
+
+<template name="patientLocation">
+{{#ensureLoggedInAndRegistered}}
+ <h2>Patient Location</h2>
+   {{> cmxApiSearch}}
+
+    <div id="content">
+      <div id="mac-address">
+        <input id="mac-field" type="text" placeholder="Enter MAC address" />&nbsp;
+        <button type="button" id="track">Follow</button>&nbsp;
+        <button type="submit" id="all">View All</button>
+      </div>
+      <div id="last-mac"></div>
+<!--       <div class="small"><span class="bold">Clients in the wrong place?</span> </div> -->
+      <div id="map-wrapper">
+        <div id="map-canvas"> 
+          {{> map}}
+</div>
+      </div>
+    </div>
+
+
+{{/ensureLoggedInAndRegistered}}
+</template>
+
+
+<template name="cmxApiSearch">
+  <ul>
+  {{#each cmxApiSearch}}
+        {{> response}}
+  {{/each}}
+</ul>
+</template>
+
+<template name="response">
+  <ul>     
+  {{#each response}}
+        {{> visitor}}
+  {{/each}}
+</ul>
+</template>
+
+<template name="visitor">
+  <li> mac:{{mac}} - lat:{{lat}} - lng:{{lng}}</li>
+</template>
+
+<template name="map">  
+  <div class="map-container">
+    {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}        
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+  </div>
+</template>  
+
+
+ 
+
+
+

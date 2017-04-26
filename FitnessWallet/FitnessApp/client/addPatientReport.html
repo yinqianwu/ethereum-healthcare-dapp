@@ -1,0 +1,72 @@
+<template name="addPatientReport">
+  {{#ensureLoggedInAndRegistered}}
+  <div class="jumbotron">
+    <h1>Add Patient Report</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" value="James Howlett" name="name" class="form-control" id="name" >
+      </div>
+      <div class="form-group">
+        <label for="mrn">MRN</label>
+        <input type="text" value="0001" name="mrn" class="form-control" id="mrn" >
+      </div>
+      <div class="form-group">
+        <label for="dob">DOB</label>
+        <input type="text" value="Sun Feb 11 1874 20:24:06 GMT-0600 (CST)" name="dob" class="form-control" id="dob" >
+      </div>
+      <div class="form-group">
+        <label for="report">Report</label>
+        <textarea type="text" rows='10' name="report" class="form-control" id="report">
+          FINDINGS:
+
+Body:
+• Regenerative Healing Factor:
+The ability to regenerate damaged or destroyed areas of his cellular structure at a rate far greater than that of an ordinary human. The speed at which this healing factor works varies in direct proportion with the severity of the damage Wolverine suffers. His natural healing also affords him virtual immunity to poisons and most drugs, as well as an enhanced resistance to diseases. 
+
+HEAD AND NECK:
+• Brain: 
+• Midline shift: None
+• Hydrocephalus: None
+• Ischemia: None
+• Hemorrhage: None
+• Parenchyma: No suspicious lesions.
+• Neck:
+• No drainable fluid collection in the neck.
+• No neck lymphadenopathy.
+• Thyroid gland demonstrates no large nodules.
+
+VASCULATURE:
+• Aorta: No evidence of thoracic or aortic aneurysm on provided images..
+• Carotid Arteries: Within limits of technique, time of flight non-contrast enhanced images of carotid arteries demonstrate no definite hemodynamically significant stenosis.
+
+CHEST:
+• Lungs: Within limits of exam, no suspicious large lesions.
+• Mediastinum: No specific evidence of suspicious mediastinal masses.  No specific evidence of lymphadenopathy in the mediastinum.
+• Pleura: No pleural effusions.  No pneumothorax
+
+ABDOMEN/PELVIS:
+• Liver: No fatty infiltration of the liver.  
+• Spleen: No splenomegaly.
+• Pancreas: No specific evidence of ductal dilatation.
+• Prostate: Not enlarged.  [if male].
+• Uterus: No fibroids. [if female].
+• Lymph nodes: No specific evidence of lymphadenopathy in the abdomen/pelvis.
+
+BONES:
+Adamantium Claws: 
+His skeleton includes six retractable one-foot long bone claws, three in each arm, that are housed beneath the skin and muscle of his forearms. He can release these slightly curved claws through his skin beneath the knuckles on each hand. The skin between the knuckles tears and bleeds, but the blood loss is quickly halted by his healing factor. 
+These claws are silver, shiny, and they are made of the Metal (Adamantium) which makes them virtually indestructible. These claws are naturally sharp and tougher than that of normal human bone structure.
+
+[No significant] / [Mild] / [Moderate] / [Severe] degenerative changes of the spine.
+        </textarea>
+      </div>
+
+      <button type="submit" id='save' class="btn btn-default btn btn-primary btn-lg">Save</button>
+      <button type="button" id='cancel' class="btn btn btn-lg">Cancel</button>
+  </form>
+    <p></p>
+  </div>
+  {{/ensureLoggedInAndRegistered}}
+
+</template>

@@ -1,0 +1,16 @@
+<template name="ensureLoggedInAndRegistered">
+  <div class="container">
+    {{#if metamask}}
+      {{#if initialized}}
+        {{#if currentUser}}
+          {{>navbar}}
+          {{> Template.contentBlock}}
+        {{else}}
+          {{>logon}}
+        {{/if}}
+      {{/if}}
+    {{else}}
+      Sorry, this application requires google chrome with <a href="https://metamask.io/">metamask</a>
+    {{/if}}
+  </div>
+</template>

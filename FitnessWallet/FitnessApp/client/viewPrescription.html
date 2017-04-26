@@ -1,0 +1,25 @@
+<template name="viewPrescription">
+  {{#ensureLoggedInAndRegistered}}
+    {{#with prescription}}
+      <div class="jumbotron">
+        <h2>View Prescription</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" value="{{getPatientName}}" name="name" class="form-control" id="name" >
+          </div>
+          <div class="form-group">
+            <label for="mrn">MRN</label>
+            <input type="text" value="{{getPatientMrn}}" name="mrn" class="form-control" id="mrn" >
+          </div>
+          <div class="form-group">
+            <label for="report">Prescription</label>
+            <textarea type="text" rows='10' value="{{getPrescription}}" name="prescription" class="form-control" id="prescription"></textarea>
+          </div>
+          <button type="button" id='close' class="btn btn btn-lg">Cancel</button>
+      </form>
+        <p></p>
+      </div>
+    {{/with}}
+  {{/ensureLoggedInAndRegistered}}
+</template>
