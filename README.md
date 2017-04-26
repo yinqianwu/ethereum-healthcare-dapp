@@ -19,4 +19,4 @@
 
 - Health records can also connect to social media. Any history you think is relevant can be recorded. A lot of people took picture of what they are eating, where they went out for dinner. Doctor can see how much meat I ate last night, what kind of exercise I did yesterday.
 
-- Doctor can have a comprehensive dashboard for your health history and get a really good picture of your health level.
+- Doctor can have a comprehensive dashboard for your health history.
