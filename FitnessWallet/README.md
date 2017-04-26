@@ -21,7 +21,7 @@ sudo apt-get install ethereum
 ```
 
 
-### Initialize local test network
+### Initialize Ethereum Testnet
 
 ```sh
 bin/init
