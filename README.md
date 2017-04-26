@@ -1,9 +1,9 @@
-###Fitness Wallet 
+# Fitness Wallet 
 
 - The Main idea is that each individual can maintain and take in charge of their own health records, to selectively share them with their doctors, nutritionists and healthcare providers.
 - A health wallet can store any type of medical or health related information. It can also accumulate data from devices and social media providing a more complete picture of the individual's health.
 
-###Features
+# Features
 
 - Track treatments, therapies and prescriptions. Patient can receive prescriptions from doctors and order medicines from prefered supplier. Prescriptions can never be double spent and prescription records can be stored on the immutable blockchain database.
 
