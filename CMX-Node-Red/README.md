@@ -24,7 +24,7 @@ Install Node-RED:
 sudo npm install -g node-red
 ```
 Setup Meraki:
-Meraki: https://account.meraki.com/secure/login/dashboard_login
+https://account.meraki.com/secure/login/dashboard_login
 
 
 ### CMX Receiver
