@@ -1,4 +1,4 @@
-### Installation for mac
+### Ethereum Installation for mac
 
 Pre-requisities
 - homebrew
@@ -12,7 +12,7 @@ brew tap ethereum/ethereum
 brew install ethereum
 ```
 
-### Installation for Ubuntu
+### Ethereum Installation for Ubuntu
 ```sh
 sudo apt-get install software-properties-common
 sudo add-apt-repository -y ppa:ethereum/ethereum
